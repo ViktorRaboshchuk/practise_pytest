@@ -1,5 +1,8 @@
 from math import sqrt
 
+TYPE_ERROR_TEXT = "Not valid type for param"
+
+
 def square_equation_solver(a, b, c):
 
     if not all(
@@ -7,7 +10,7 @@ def square_equation_solver(a, b, c):
             lambda p: isinstance(a, (int, float)), (a, b, c)
             )
     ):
-        raise TypeError("Not valid type for param")
+        raise TypeError(TYPE_ERROR_TEXT)
     print("Types are OK")
 
     if a == 0:
